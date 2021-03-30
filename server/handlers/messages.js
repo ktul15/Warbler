@@ -43,6 +43,6 @@ exports.deleteMessage = async (req, res, next) => {
     await foundMessage.remove()
     return res.status(200).json(foundMessage)
   } catch (e) {
-    next(e)
+    return next(e)
   }
 }

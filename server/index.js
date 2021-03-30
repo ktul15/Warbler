@@ -41,7 +41,7 @@ app.get('/api/messages', async (req, res, next) => {
 // if none of my routes are reached, run this function
 app.use((req, res, next) => {
   let err = new Error('Not Found!')
-  err.status = 404
+  err.status = 400
   next(err)
 })
 
